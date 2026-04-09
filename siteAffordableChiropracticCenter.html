@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Affordable Chiropractic Center | Albuquerque, NM</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;color:#1a1a1a;background:#fff}
+:root{--c1:#6b1a2a;--ca:#d4a843;--pale:#fdf8ee}
+.topbar{background:#3d0f18;color:rgba(255,255,255,.65);padding:9px 0;font-size:.78rem}
+.topbar .inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar a{color:#d4a843;text-decoration:none;font-weight:600}
+nav{background:#fff;border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo-wrap{display:flex;align-items:center;gap:12px;cursor:pointer}
+.logo-icon{width:46px;height:46px;background:var(--c1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem}
+.logo-text{font-weight:800;font-size:1.05rem;color:var(--c1)}
+.logo-sub{font-size:.68rem;color:#888}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:8px 14px;font-size:.87rem;font-weight:500;color:#444;text-decoration:none;border-radius:6px;cursor:pointer;transition:all .2s}
+.nav-links a:hover,.nav-links a.active{background:var(--pale);color:var(--c1);font-weight:600}
+.ncta{background:var(--c1);color:white!important;padding:10px 22px!important;border-radius:8px!important;font-weight:700!important;margin-left:8px}
+.page{display:none}.page.active{display:block}
+.hero{background:linear-gradient(135deg,#3d0f18 0%,#6b1a2a 60%,#3d0f18 100%);min-height:88vh;display:flex;align-items:center;padding:80px 28px}
+.hi{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+.hbadge{display:inline-flex;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:50px;margin-bottom:24px;color:#d4a843;font-size:.78rem;font-weight:600}
+.hero h1{font-size:clamp(2.4rem,4vw,3.8rem);font-weight:900;color:white;line-height:1.05;letter-spacing:-1.5px;margin-bottom:20px}
+.hero h1 em{color:#d4a843;font-style:normal}
+.hdesc{color:rgba(255,255,255,.75);font-size:1rem;line-height:1.85;margin-bottom:32px;max-width:460px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.bp{background:white;color:var(--c1);padding:15px 30px;font-weight:800;font-size:.95rem;text-decoration:none;border-radius:8px;display:inline-block}
+.bo{background:transparent;color:white;border:1px solid rgba(255,255,255,.35);padding:15px 26px;font-weight:500;font-size:.95rem;border-radius:8px;display:inline-block;cursor:pointer}
+.tr{display:flex;gap:24px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.65);font-size:.82rem}
+.ti b{color:#d4a843}
+.hcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sb{background:rgba(255,255,255,.06);border-radius:10px;padding:20px;text-align:center}
+.sn{font-size:2.2rem;font-weight:900;color:#d4a843}
+.sl{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+.rprev{background:rgba(255,255,255,.06);border-radius:10px;padding:18px;border-left:3px solid #d4a843}
+.rs{color:#f59e0b;font-size:.9rem;margin-bottom:8px}
+.rt{color:rgba(255,255,255,.7);font-size:.82rem;line-height:1.7;font-style:italic;margin-bottom:10px}
+.rn{font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600}
+.sec{padding:80px 28px}
+.si{max-width:1200px;margin:0 auto}
+.lbl{font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--c1);margin-bottom:10px;opacity:.7}
+.sth{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--c1);line-height:1.1;letter-spacing:-1px;margin-bottom:16px}
+.sdesc{color:#666;font-size:1rem;line-height:1.8;max-width:560px}
+.shd{margin-bottom:52px}.shd.c{text-align:center}.shd.c .sdesc{margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:white;border:1px solid #eee;border-radius:14px;padding:28px;transition:all .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1);border-color:var(--ca)}
+.ci{width:52px;height:52px;background:var(--pale);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px}
+.card h3{font-size:1.05rem;font-weight:800;color:var(--c1);margin-bottom:10px}
+.card p{color:#666;font-size:.88rem;line-height:1.75}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.aimg{background:linear-gradient(135deg,var(--c1),#d4a843);border-radius:16px;height:420px;display:flex;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,.3)}
+.fl{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+.fi{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--pale);border-radius:10px}
+.fie{font-size:1.3rem;margin-top:2px}
+.fi h4{font-weight:700;color:var(--c1);font-size:.9rem;margin-bottom:4px}
+.fi p{font-size:.82rem;color:#666;line-height:1.6}
+.stps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-bottom:52px}
+.step{text-align:center;padding:32px 20px}
+.stepn{width:56px;height:56px;background:var(--c1);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 16px}
+.step h3{font-weight:700;color:var(--c1);margin-bottom:8px}
+.step p{color:#666;font-size:.87rem;line-height:1.7}
+.faq{display:flex;flex-direction:column}
+.fqi{border-bottom:1px solid #eee;padding:20px 0}
+.fqi:last-child{border-bottom:none}
+.fqq{font-weight:700;color:var(--c1);margin-bottom:8px}
+.fqa{color:#666;font-size:.88rem;line-height:1.75}
+.insbox{background:var(--pale);border-radius:14px;padding:32px;margin-top:40px}
+.insbox h3{font-weight:800;color:var(--c1);margin-bottom:12px}
+.insbox p{color:#555;font-size:.9rem;line-height:1.75}
+.rvg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.rv-card{background:white;border:1px solid #eee;border-radius:14px;padding:28px;position:relative}
+.rv-card::before{content:'"';position:absolute;top:16px;right:24px;font-size:4rem;color:var(--pale);font-family:Georgia;line-height:1}
+.rv-stars{color:#f59e0b;font-size:.95rem;margin-bottom:12px}
+.rv-card p{color:#444;font-size:.9rem;line-height:1.8;margin-bottom:20px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:10px}
+.rv-avatar{width:38px;height:38px;background:var(--c1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:.85rem}
+.rv-rname{font-weight:700;font-size:.85rem;color:var(--c1)}
+.rv-rlabel{font-size:.72rem;color:#bbb}
+.rbn{background:var(--c1);border-radius:14px;padding:36px;text-align:center;margin-bottom:40px;color:white}
+.rbig{font-size:3.5rem;font-weight:900;color:#d4a843}
+.rstars{font-size:1.5rem;color:#f59e0b;margin:4px 0}
+.rcnt{color:rgba(255,255,255,.6);font-size:.85rem}
+.cog{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+.cb{background:var(--pale);border-radius:12px;padding:22px;display:flex;gap:16px;align-items:flex-start;margin-bottom:16px}
+.cbi{font-size:1.4rem;margin-top:2px}
+.cb h4{font-weight:700;color:var(--c1);margin-bottom:6px;font-size:.9rem}
+.cb p,.cb a{color:#555;font-size:.87rem;line-height:1.7;text-decoration:none}
+.htbl{width:100%;border-collapse:collapse}
+.htbl tr{border-bottom:1px solid #f0f0f0}
+.htbl td{padding:10px 0;font-size:.88rem}
+.htbl td:first-child{color:#333;font-weight:600}
+.htbl td:last-child{color:var(--c1);font-weight:600;text-align:right}
+.htbl .cls{color:#e57373!important}
+.cbox{background:var(--c1);border-radius:14px;padding:32px;text-align:center;color:white;margin-top:24px}
+.cbox h3{font-size:1.3rem;font-weight:800;margin-bottom:8px}
+.cbox p{color:rgba(255,255,255,.7);font-size:.87rem;margin-bottom:20px}
+.cbox a{background:white;color:var(--c1);padding:14px 28px;font-weight:800;border-radius:8px;text-decoration:none;display:inline-block}
+footer{background:#3d0f18;color:rgba(255,255,255,.4);padding:40px 28px}
+.fi2{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.fb p{color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.7;margin-top:10px;max-width:260px}
+.fc h4{color:rgba(255,255,255,.7);font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.fc a{display:block;color:rgba(255,255,255,.4);font-size:.83rem;text-decoration:none;margin-bottom:8px;cursor:pointer}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;font-size:.75rem;flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.hi,.ag,.cog,.fi2{grid-template-columns:1fr}.hcard{display:none}.nav-links a:not(.ncta){display:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="inner"><span>📍 1112 Alvarado Dr NE, Albuquerque, NM 87110, USA</span><span style="color:#d4a843;font-weight:600">Expert Chiropractic Care · Albuquerque, NM</span><a href="tel:5052556357">📞 (505) 255-6357</a></div></div>
+<nav><div class="nav-inner">
+<div class="logo-wrap" onclick="showPage('home')"><div class="logo-icon">🦴</div><div><div class="logo-text">Affordable Chiropractic Center</div><div class="logo-sub">Albuquerque, NM</div></div></div>
+<div class="nav-links">
+<a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+<a onclick="showPage('about')" id="nav-about">About</a>
+<a onclick="showPage('services')" id="nav-services">Services</a>
+<a onclick="showPage('new-patients')" id="nav-new-patients">New Patients</a>
+<a onclick="showPage('reviews')" id="nav-reviews">Reviews</a>
+<a onclick="showPage('contact')" id="nav-contact">Contact</a>
+<a href="tel:5052556357" class="ncta">📞 Call Now</a>
+</div></div></nav>
+
+<div class="page active" id="page-home">
+<section class="hero"><div class="hi"><div>
+<div class="hbadge">⭐ Albuquerque, NM Chiropractic</div>
+<h1>Expert Care.<br>Real Results.<br><em>Your Community.</em></h1>
+<p class="hdesc">Affordable Chiropractic Center is Albuquerque, NM's trusted chiropractic practice — delivering expert, personalized care that gets patients back to living fully.</p>
+<div class="hbtns"><a href="tel:5052556357" class="bp">📞 Call (505) 255-6357</a><span class="bo" onclick="showPage('new-patients')">New Patients →</span></div>
+<div class="tr"><div class="ti"><b>✓</b> Expert chiropractic care</div><div class="ti"><b>✓</b> All ages welcome</div><div class="ti"><b>✓</b> 4.6★ rated</div></div>
+</div>
+<div class="hcard"><div class="sg">
+<div class="sb"><div class="sn">4.6</div><div class="sl">Star Rating</div></div>
+<div class="sb"><div class="sn">32</div><div class="sl">Reviews</div></div>
+<div class="sb"><div class="sn">All</div><div class="sl">Ages Welcome</div></div>
+<div class="sb"><div class="sn">Local</div><div class="sl">Community</div></div>
+</div>
+<div class="rprev"><div class="rs">★★★★★</div><div class="rt">"Outstanding chiropractic care. Thorough, professional, and genuinely invested in your wellbeing."</div><div class="rn">— Verified Google Review</div></div>
+</div></div></section>
+<section class="sec" style="background:var(--pale)"><div class="si">
+<div class="shd c"><div class="lbl">Why Choose Us</div><h2 class="sth">The Affordable Difference</h2><p class="sdesc">Expert chiropractic care with a personal touch — because your health deserves more than a one-size-fits-all approach.</p></div>
+<div class="grid">
+<div class="card"><div class="ci">🎯</div><h3>Precise, Expert Care</h3><p>Every treatment is tailored to your specific condition and goals — no generic protocols, no rushed appointments.</p></div>
+<div class="card"><div class="ci">❤️</div><h3>Patient-Centered</h3><p>We take time to listen, understand, and explain. You'll always know what we're doing and why.</p></div>
+<div class="card"><div class="ci">👨‍👩‍👧</div><h3>All Ages Welcome</h3><p>From infants to seniors, we provide age-appropriate care for every member of your family.</p></div>
+<div class="card"><div class="ci">📍</div><h3>Albuquerque, NM Local</h3><p>Not a franchise. Local ownership means genuine investment in your outcomes and your community.</p></div>
+</div></div></section>
+<section class="sec"><div class="si" style="text-align:center">
+<div class="lbl">Ready to Feel Better?</div><h2 class="sth">Book Your First Visit</h2>
+<p class="sdesc" style="margin:0 auto 32px">Call today — new patients are always welcome.</p>
+<a href="tel:5052556357" class="bp" style="background:var(--c1);color:white;font-size:1.05rem;padding:18px 36px">📞 Call (505) 255-6357</a>
+</div></section></div>
+
+<div class="page" id="page-about">
+<section class="sec" style="padding-top:60px"><div class="si"><div class="ag">
+<div class="aimg">🦴</div>
+<div><div class="lbl">About the Practice</div><h2 class="sth">Affordable Chiropractic Center</h2>
+<p class="sdesc">Affordable Chiropractic Center has built a reputation for expert, personalized chiropractic care in Albuquerque, NM. Our approach finds the root cause of your pain — not just masking symptoms — for lasting results.</p>
+<p style="color:#666;font-size:.9rem;line-height:1.8;margin-top:16px;margin-bottom:28px">Patients choose us because we genuinely listen, understand their full history, and build care plans that actually work. From professional athletes to grandparents, infants to office workers.</p>
+<div class="fl">
+<div class="fi"><div class="fie">🎓</div><div><h4>Licensed Doctor of Chiropractic</h4><p>Fully licensed and experienced in safe, effective care for every condition and age group.</p></div></div>
+<div class="fi"><div class="fie">❤️</div><div><h4>Patient-First Philosophy</h4><p>Every decision is in your best interest. Honest recommendations, transparent communication, no unnecessary treatments.</p></div></div>
+<div class="fi"><div class="fie">🏘️</div><div><h4>Albuquerque, NM Community</h4><p>Locally owned, locally invested, committed to your long-term health.</p></div></div>
+</div></div></div></div></section></div>
+
+<div class="page" id="page-services">
+<section class="sec" style="padding-top:60px"><div class="si">
+<div class="shd"><div class="lbl">What We Treat</div><h2 class="sth">Our Services</h2><p class="sdesc">Comprehensive chiropractic services for every age and condition.</p></div>
+<div class="grid">
+<div class="card"><div class="ci">🦴</div><h3>Spinal Adjustment</h3><p>Precise adjustments to restore alignment, relieve nerve pressure, and reduce pain throughout the spine.</p></div>
+<div class="card"><div class="ci">🤕</div><h3>Back &amp; Neck Pain</h3><p>Targeted care for acute and chronic pain — treating the root cause for lasting relief.</p></div>
+<div class="card"><div class="ci">🏃</div><h3>Sports Injuries</h3><p>Get back to peak performance faster with care designed for athletes recovering from injuries.</p></div>
+<div class="card"><div class="ci">👶</div><h3>Pediatric Care</h3><p>Gentle, safe adjustments for infants and children — helping with colic, posture, and growing pains.</p></div>
+<div class="card"><div class="ci">🤰</div><h3>Prenatal Care</h3><p>Safe chiropractic care during pregnancy to relieve back pain and support fetal positioning.</p></div>
+<div class="card"><div class="ci">👴</div><h3>Senior Care</h3><p>Gentle, age-appropriate adjustments to improve mobility and maintain quality of life.</p></div>
+<div class="card"><div class="ci">🧘</div><h3>Posture Correction</h3><p>Address postural imbalances from desk work before they become chronic pain.</p></div>
+<div class="card"><div class="ci">🚗</div><h3>Auto Accident &amp; Injury</h3><p>Specialized care for accident victims — full recovery from whiplash and soft tissue damage.</p></div>
+</div></div></section></div>
+
+<div class="page" id="page-new-patients">
+<section class="sec" style="padding-top:60px"><div class="si">
+<div class="shd"><div class="lbl">Getting Started</div><h2 class="sth">New Patients</h2><p class="sdesc">Your first visit is easy, comfortable, and pressure-free.</p></div>
+<div class="stps">
+<div class="step"><div class="stepn">1</div><h3>Call to Schedule</h3><p>Call (505) 255-6357 — new patients are always prioritized.</p></div>
+<div class="step"><div class="stepn">2</div><h3>Consultation</h3><p>We review your history, listen to your concerns, and examine you thoroughly before any treatment.</p></div>
+<div class="step"><div class="stepn">3</div><h3>First Adjustment</h3><p>If appropriate, you may receive your first adjustment same-day and begin experiencing relief immediately.</p></div>
+<div class="step"><div class="stepn">4</div><h3>Your Care Plan</h3><p>Leave with a clear, honest plan — only what you need. No pressure, no upsells.</p></div>
+</div>
+<div class="insbox"><h3>💳 Insurance &amp; Payment</h3><p>We work with most major insurance providers and offer affordable cash-pay rates. Call us to verify your benefits.</p></div>
+<div style="margin-top:52px"><h3 style="font-size:1.4rem;font-weight:800;color:var(--c1);margin-bottom:28px">Common Questions</h3>
+<div class="faq">
+<div class="fqi"><div class="fqq">Does chiropractic care hurt?</div><div class="fqa">Most patients feel immediate relief. Some mild soreness for 24 hours is normal. We explain everything before we begin.</div></div>
+<div class="fqi"><div class="fqq">How many visits will I need?</div><div class="fqa">Depends on your condition. You'll get an honest estimate — never more visits than necessary.</div></div>
+<div class="fqi"><div class="fqq">Do I need a referral?</div><div class="fqa">No referral needed. Call and book directly.</div></div>
+<div class="fqi"><div class="fqq">What should I wear?</div><div class="fqa">Comfortable, loose-fitting clothing. Athletic wear is ideal.</div></div>
+</div></div></div></section></div>
+
+<div class="page" id="page-reviews">
+<section class="sec" style="padding-top:60px"><div class="si">
+<div class="shd c"><div class="lbl">Patient Testimonials</div><h2 class="sth">What Our Patients Say</h2></div>
+<div class="rbn"><div class="rbig">4.6</div><div class="rstars">★★★★★</div><div class="rcnt">4.6 stars · 32 Google reviews</div></div>
+<div class="rvg"><div class="rv-card"><div class="rv-stars">★★★★★</div><p>"What an amazing chiropractor! He worked with my schedule and was able to see me right away. I've been going to chiropractors for decades and he's definitely one of the best! He was incredibly thorough..."</p><div class="reviewer"><div class="rv-avatar">DD</div><div><div class="rv-rname">desert dweller</div><div class="rv-rlabel">Verified Google Review</div></div></div></div><div class="rv-card"><div class="rv-stars">★★★★★</div><p>"Im just shocked at any negative reviews!
+I have been going to Dr Perea over 13 years. My entire family goes to him and I send all my clients to him. He is exceptional at what he does. No bells, whistl..."</p><div class="reviewer"><div class="rv-avatar">MS</div><div><div class="rv-rname">Marie Stephens</div><div class="rv-rlabel">Verified Google Review</div></div></div></div><div class="rv-card"><div class="rv-stars">★★★★★</div><p>"Went in for an adjustment due Albuquerque drivers almost got hit, was able to call and get in fast, great adjustment, great service, friendly, fast, and old fashion adjustment without the do this pay ..."</p><div class="reviewer"><div class="rv-avatar">LS</div><div><div class="rv-rname">LoriAnn Sanchez</div><div class="rv-rlabel">Verified Google Review</div></div></div></div><div class="rv-card"><div class="rv-stars">★★★★★</div><p>"I've been here a few times. It's a great place and he did a great job helping me out when I was in terrible pain...."</p><div class="reviewer"><div class="rv-avatar">UE</div><div><div class="rv-rname">Unlikely Events</div><div class="rv-rlabel">Verified Google Review</div></div></div></div></div>
+</div></section></div>
+
+<div class="page" id="page-contact">
+<section class="sec" style="padding-top:60px"><div class="si">
+<div class="shd"><div class="lbl">Get In Touch</div><h2 class="sth">Contact Us</h2><p class="sdesc">Ready to feel better? Call us — we make it easy for new patients.</p></div>
+<div class="cog"><div>
+<div class="cb"><div class="cbi">📞</div><div><h4>Phone</h4><a href="tel:5052556357">(505) 255-6357</a></div></div>
+<div class="cb"><div class="cbi">📍</div><div><h4>Location</h4><p>1112 Alvarado Dr NE, Albuquerque, NM 87110, USA</p></div></div>
+<div class="cbox"><h3>Book Your Visit</h3><p>New patients welcome — call today.</p><a href="tel:5052556357">📞 (505) 255-6357</a></div>
+</div><div>
+<div style="background:white;border:1px solid #eee;border-radius:14px;padding:28px">
+<h3 style="font-weight:800;color:var(--c1);margin-bottom:20px;font-size:1.1rem">Office Hours</h3>
+<table class="htbl"><tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr><tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr><tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr><tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr><tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr><tr><td>Saturday</td><td class="cls">Closed</td></tr><tr><td>Sunday</td><td class="cls">Closed</td></tr></table>
+</div>
+<div style="margin-top:20px;background:#f5f5f5;border-radius:14px;height:200px;display:flex;align-items:center;justify-content:center;border:1px solid #eee">
+<div style="text-align:center;color:#aaa"><div style="font-size:2rem;margin-bottom:8px">📍</div><div style="font-size:.9rem">1112 Alvarado Dr NE, Albuquerque, NM 87110, USA</div><a href="https://maps.google.com/?q=1112%20Alvarado%20Dr%20NE%2C%20Albuquerque%2C%20NM%2087110%2C%20USA" target="_blank" style="color:var(--c1);font-weight:600;font-size:.85rem;text-decoration:none;margin-top:8px;display:block">Open in Google Maps →</a></div>
+</div>
+</div></div></div></section></div>
+
+<footer><div class="fi2">
+<div class="fb"><div style="font-weight:800;color:white;font-size:1rem">Affordable Chiropractic Center</div><p>Expert chiropractic care for Albuquerque, NM and surrounding community.</p></div>
+<div class="fc"><h4>Pages</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('services')">Services</a><a onclick="showPage('new-patients')">New Patients</a><a onclick="showPage('reviews')">Reviews</a><a onclick="showPage('contact')">Contact</a></div>
+<div class="fc"><h4>Contact</h4><a href="tel:5052556357">(505) 255-6357</a><a>1112 Alvarado Dr NE, Albuquerque, NM 87110, USA</a></div>
+</div><div class="fbot"><span>© 2026 Affordable Chiropractic Center</span><span>Albuquerque, NM</span></div></footer>
+<script>function showPage(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));document.getElementById('page-'+n).classList.add('active');const el=document.getElementById('nav-'+n);if(el)el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}</script>
+</body></html>
