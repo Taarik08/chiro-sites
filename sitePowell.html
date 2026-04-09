@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Powell Chiropractic Center | Tifton, GA</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; color: #222; }
+:root { --c1: #1a2d4a; --ca: #c9982a; --cl: #faf8f3; }
+.topbar { background: var(--ca); padding: 10px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.topbar span, .topbar a { font-family: sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--c1); text-decoration: none; }
+nav { background: var(--c1); padding: 0 40px; display: flex; justify-content: space-between; align-items: center; height: 68px; position: sticky; top: 0; z-index: 99; }
+.nav-brand { color: white; font-weight: 700; font-size: 1.05rem; }
+.nav-sub { color: var(--ca); font-family: sans-serif; font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; }
+.nav-links a { color: rgba(255,255,255,0.8); font-family: sans-serif; font-size: 0.88rem; text-decoration: none; margin-left: 28px; }
+.btn-gold { background: var(--ca); color: var(--c1); padding: 10px 24px; font-family: sans-serif; font-weight: 800; font-size: 0.88rem; text-decoration: none; margin-left: 20px; }
+.hero { background: linear-gradient(135deg, #0d1e30 0%, #1a2d4a 60%, #2c4a7a 100%); min-height: 88vh; display: flex; align-items: center; padding: 80px 40px; }
+.hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center; width: 100%; }
+.hero h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 700; color: white; line-height: 1.08; margin-bottom: 24px; }
+.hero h1 span { color: var(--ca); }
+.hero-label { color: var(--ca); font-family: sans-serif; font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
+.hero p { color: rgba(255,255,255,0.75); font-family: sans-serif; font-weight: 300; font-size: 1.05rem; line-height: 1.9; max-width: 460px; margin-bottom: 36px; }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-white { background: white; color: var(--c1); padding: 16px 36px; font-family: sans-serif; font-weight: 800; font-size: 1rem; text-decoration: none; }
+.btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; padding: 16px 28px; font-family: sans-serif; font-size: 0.9rem; cursor: pointer; text-decoration: none; }
+.stats { display: flex; flex-direction: column; gap: 3px; }
+.stat { background: rgba(255,255,255,0.04); border-left: 3px solid var(--ca); padding: 20px 24px; }
+.stat-n { font-size: 1.8rem; font-weight: 700; color: var(--ca); font-family: sans-serif; }
+.stat-l { font-size: 0.78rem; color: rgba(255,255,255,0.55); font-family: sans-serif; margin-top: 4px; letter-spacing: 0.5px; }
+.section { padding: 90px 40px; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label { color: #2c4a7a; font-family: sans-serif; font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; }
+.section-title { font-size: 2.4rem; font-weight: 700; color: var(--c1); margin-bottom: 0; }
+.about-text { color: #555; font-family: sans-serif; font-weight: 300; font-size: 1.05rem; line-height: 1.9; margin: 24px 0 16px; }
+.icons { display: flex; justify-content: center; gap: 60px; margin-top: 48px; flex-wrap: wrap; }
+.icon-item { text-align: center; }
+.icon-item .ico { font-size: 2rem; margin-bottom: 8px; }
+.icon-item span { font-family: sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--c1); }
+.reviews-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 24px; }
+.rating-box { background: var(--c1); color: white; padding: 24px 32px; text-align: center; }
+.rating-num { font-size: 3.5rem; font-weight: 700; font-family: sans-serif; color: var(--ca); line-height: 1; }
+.rating-stars { color: var(--ca); font-size: 1.2rem; margin: 6px 0; }
+.rating-count { font-family: sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.card { background: var(--cl); padding: 32px 28px; border-top: 3px solid var(--ca); }
+.card-stars { color: #c9982a; margin-bottom: 14px; font-family: sans-serif; font-size: 1.1rem; }
+.card p { color: #444; line-height: 1.85; font-size: 0.92rem; font-style: italic; margin-bottom: 24px; }
+.card-name { font-family: sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--c1); }
+.card-sub { font-family: sans-serif; font-size: 0.72rem; color: #aaa; }
+.contact-sec { background: var(--c1); padding: 90px 40px; }
+.contact-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.contact-label { color: var(--ca); font-family: sans-serif; font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
+.contact-title { font-size: 2.2rem; font-weight: 700; color: white; margin-bottom: 24px; line-height: 1.2; }
+.contact-desc { color: rgba(255,255,255,0.65); font-family: sans-serif; font-weight: 300; line-height: 1.85; margin-bottom: 32px; }
+.contact-links { display: flex; flex-direction: column; gap: 14px; }
+.contact-link { display: flex; align-items: center; gap: 14px; color: white; text-decoration: none; font-family: sans-serif; font-weight: 700; font-size: 1.1rem; }
+.contact-addr { display: flex; align-items: center; gap: 14px; color: rgba(255,255,255,0.6); font-family: sans-serif; font-size: 0.9rem; }
+.hours-box { background: rgba(255,255,255,0.05); border-top: 3px solid var(--ca); padding: 32px; }
+.hours-title { font-family: sans-serif; font-weight: 700; font-size: 1rem; color: var(--ca); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+.hours-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: sans-serif; }
+.hours-row:last-child { border-bottom: none; }
+.hours-day { font-weight: 600; font-size: 0.88rem; color: rgba(255,255,255,0.7); }
+.hours-time { font-size: 0.88rem; color: var(--ca); font-weight: 600; }
+.hours-closed { color: #e57373; }
+.btn-book { display: block; margin-top: 28px; background: var(--ca); color: var(--c1); padding: 16px; text-align: center; font-family: sans-serif; font-weight: 800; text-decoration: none; }
+footer { background: #0d1e30; color: rgba(255,255,255,0.4); padding: 24px 40px; display: flex; justify-content: space-between; font-family: sans-serif; font-size: 0.78rem; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .contact-inner { grid-template-columns: 1fr; } .stats { flex-direction: row; flex-wrap: wrap; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>&#128205; 1444 Tift Ave N B, Tifton, GA 31794</span>
+  <span>&#11088; 5.0 Stars &middot; 227 Reviews &middot; Tifton's Most Trusted Chiropractor</span>
+  <a href="tel:2293823210">&#128222; (229) 382-3210</a>
+</div>
+
+<nav>
+  <div>
+    <div class="nav-brand">Powell Chiropractic Center</div>
+    <div class="nav-sub">Serving Tifton, Georgia Since 2000</div>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:2293823210" class="btn-gold">Call Now</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">Tifton, Georgia &middot; 20+ Years of Trust</div>
+      <h1>Dr. Powell Has Been Getting<br>Tifton Back<br><span>On Its Feet.</span></h1>
+      <p>227 Google reviews. Every single one, five stars. Sabrina and Sharon greet you by name. Dr. Powell actually fixes the problem. This is what 20 years of doing it right looks like.</p>
+      <div class="hero-btns">
+        <a href="tel:2293823210" class="btn-white">&#128222; (229) 382-3210</a>
+        <a href="#reviews" class="btn-outline">Read Reviews &rarr;</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-n">227</div><div class="stat-l">Five-Star Google Reviews</div></div>
+      <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Years Serving Tifton</div></div>
+      <div class="stat"><div class="stat-n">7AM</div><div class="stat-l">Early Hours, Mon&ndash;Thu</div></div>
+      <div class="stat"><div class="stat-n">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="stat-l">Perfect 5.0 Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" style="background: var(--cl);">
+  <div class="section-inner" style="text-align:center; max-width: 900px;">
+    <div class="section-label">About the Practice</div>
+    <h2 class="section-title">The Kind of Chiropractor People Drive Across Town For</h2>
+    <p class="about-text">Powell Chiropractic Center has been a pillar of Tifton for over two decades. Dr. Powell doesn't just adjust spines &mdash; he listens, diagnoses properly, and builds a plan that actually works long-term. That's why patients have been coming back for 20 years and sending their families too.</p>
+    <p class="about-text">The front desk staff &mdash; Sabrina and Sharon &mdash; greet every single patient by name. Multiple reviewers specifically mention this. That's not an accident. It's a culture Dr. Powell built intentionally.</p>
+    <div class="icons">
+      <div class="icon-item"><div class="ico">&#129460;</div><span>Spinal Adjustment</span></div>
+      <div class="icon-item"><div class="ico">&#128170;</div><span>Injury Recovery</span></div>
+      <div class="icon-item"><div class="ico">&#127807;</div><span>Long-Term Wellness</span></div>
+      <div class="icon-item"><div class="ico">&#128106;</div><span>Family Care</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews" style="background: white;">
+  <div class="section-inner">
+    <div class="reviews-header">
+      <div>
+        <div class="section-label">What Tifton Says</div>
+        <h2 class="section-title">227 Reasons to Pick Up the Phone</h2>
+      </div>
+      <div class="rating-box">
+        <div class="rating-num">5.0</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-count">227 GOOGLE REVIEWS</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"This is truly one of the most well-run practices you'll find. From the moment you walk through the door, Sabrina and Sharon keep everything moving smoothly. Dr. Powell is exceptional &mdash; thorough, knowledgeable, and genuinely invested in your health."</p>
+        <div class="card-name">Maria Hamill</div><div class="card-sub">Verified Google Review</div>
+      </div>
+      <div class="card">
+        <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"My wife and I have been using Dr. Powell's services for about 20 years. We could not be happier with him and his staff. They have really helped us in so many ways. I refer everyone I can to this practice."</p>
+        <div class="card-name">Ronald Gilbert</div><div class="card-sub">Verified Google Review</div>
+      </div>
+      <div class="card">
+        <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"All around great facility. Sabrina and Sharon are extremely welcoming and they greet everyone by name. Dr. Powell is down to earth, knowledgeable, and genuinely cares about his patients."</p>
+        <div class="card-name">Chenoa Coker</div><div class="card-sub">Verified Google Review</div>
+      </div>
+      <div class="card">
+        <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"I was damaged from heavy lifting over the years. Dr. Powell and his staff have been instrumental in my recovery and ongoing quality of life. Cannot recommend this practice enough."</p>
+        <div class="card-name">Nikki Wildes</div><div class="card-sub">Verified Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-sec" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="contact-label">Get In Touch</div>
+      <h2 class="contact-title">Ready When You Are</h2>
+      <p class="contact-desc">Open Monday through Thursday starting at 7AM. Call to schedule &mdash; same-week appointments often available.</p>
+      <div class="contact-links">
+        <a href="tel:2293823210" class="contact-link">&#128222; (229) 382-3210</a>
+        <div class="contact-addr">&#128205; 1444 Tift Ave N B, Tifton, GA 31794</div>
+      </div>
+    </div>
+    <div class="hours-box">
+      <div class="hours-title">Office Hours</div>
+      <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">7:00 AM &ndash; 6:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">7:00 AM &ndash; 6:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">7:00 AM &ndash; 6:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">7:00 AM &ndash; 6:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time hours-closed">Closed</span></div>
+      <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time hours-closed">Closed</span></div>
+      <a href="tel:2293823210" class="btn-book">Call to Schedule &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Powell Chiropractic Center &middot; Tifton, GA</span>
+  <span>(229) 382-3210</span>
+</footer>
+
+</body>
+</html>
