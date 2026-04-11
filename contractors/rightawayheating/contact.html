@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Right Away Heating</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;color:#1a1a2e}
+nav{background:#c0392b;padding:16px 40px;display:flex;justify-content:space-between;align-items:center}
+nav .logo{color:#fff;font-size:1.4rem;font-weight:700}nav ul{list-style:none;display:flex;gap:28px}
+nav ul li a{color:#fff;text-decoration:none;font-weight:500}
+.page-hero{background:#922b21;color:#fff;padding:60px 40px;text-align:center}.page-hero h1{font-size:2.2rem}
+section{padding:60px 40px;max-width:900px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
+.info h3{color:#c0392b;margin-bottom:16px;font-size:1.2rem}.info p{line-height:2;color:#555}
+form{display:flex;flex-direction:column;gap:16px}
+input,textarea,select{padding:12px 16px;border:1px solid #ddd;border-radius:6px;font-size:1rem;font-family:inherit}
+textarea{height:140px;resize:vertical}
+button{background:#c0392b;color:#fff;padding:14px;border:none;border-radius:6px;font-size:1rem;font-weight:700;cursor:pointer}
+button:hover{background:#922b21}
+.calendar-box{background:#f9f9f9;border:1px solid #e0e0e0;border-radius:10px;padding:32px;margin-top:40px;text-align:center}
+.calendar-box h3{color:#c0392b;margin-bottom:20px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:400px;margin:0 auto}
+.cal-day{padding:10px;border-radius:6px;font-size:.85rem;text-align:center;cursor:pointer;border:1px solid #e0e0e0}
+.cal-day.available{background:#fff5f5;color:#c0392b;font-weight:600}.cal-day.available:hover{background:#c0392b;color:#fff}
+.cal-day.taken{background:#eee;color:#aaa}.cal-day.header{font-weight:700;color:#555;border:none;cursor:default}
+footer{background:#1a1a2e;color:#ccc;text-align:center;padding:32px;font-size:.9rem}</style></head>
+<body>
+<nav><div class="logo">🔥 Right Away Heating</div>
+<ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<div class="page-hero"><h1>Contact & Book</h1><p style="margin-top:12px;opacity:.85">Ready to help — reach out or book online</p></div>
+<section>
+<div class="contact-grid">
+<div class="info">
+<h3>Get In Touch</h3>
+<p>📍 340 Santa Fe Dr, Denver, CO 80223<br>📞 <a href="tel:7206461962" style="color:#c0392b">(720) 646-1962</a><br>📧 jose@rightawayheating.com<br>⏰ Mon–Fri: 7am–7pm<br>🚨 Emergency: 24/7</p>
+</div>
+<form><input type="text" placeholder="Your Name"><input type="email" placeholder="Email Address">
+<input type="tel" placeholder="Phone Number">
+<select><option>Select Service</option><option>Furnace Repair</option><option>Furnace Install</option><option>AC Repair</option><option>AC Install</option><option>Maintenance</option></select>
+<textarea placeholder="Describe your issue..."></textarea>
+<button type="submit">Send Message</button></form>
+</div>
+<div class="calendar-box">
+<h3>📅 Schedule a Visit</h3>
+<div class="cal-grid">
+<div class="cal-day header">Sun</div><div class="cal-day header">Mon</div><div class="cal-day header">Tue</div>
+<div class="cal-day header">Wed</div><div class="cal-day header">Thu</div><div class="cal-day header">Fri</div><div class="cal-day header">Sat</div>
+<div class="cal-day taken">13</div><div class="cal-day available">14</div><div class="cal-day available">15</div>
+<div class="cal-day taken">16</div><div class="cal-day available">17</div><div class="cal-day available">18</div><div class="cal-day taken">19</div>
+<div class="cal-day available">20</div><div class="cal-day taken">21</div><div class="cal-day available">22</div>
+<div class="cal-day available">23</div><div class="cal-day taken">24</div><div class="cal-day available">25</div><div class="cal-day available">26</div>
+</div>
+<p style="margin-top:16px;color:#888;font-size:.85rem">Click an available date to request an appointment</p>
+</div>
+</section>
+<footer><strong>Right Away Heating</strong><br>340 Santa Fe Dr, Denver, CO 80223 | (720) 646-1962</footer>
+</body></html>
