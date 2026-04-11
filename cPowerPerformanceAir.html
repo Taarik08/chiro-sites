@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power & Performance Air | HVAC | Bakersfield, CA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --c1: #0d2d5e; --ca: #3a8fde; --pale: #eef5fd; --dark: #071a3a;
+  --shadow: 0 4px 24px rgba(0,0,0,.08);
+  --radius: 14px;
+}
+body { font-family: 'Inter', system-ui, sans-serif; color: #1a1a1a; background: #fff; }
+
+/* ── Topbar ── */
+.topbar { background: var(--dark); padding: 10px 0; font-size: .78rem; }
+.topbar .inner { max-width: 1200px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; color: rgba(255,255,255,.55); }
+.topbar a { color: var(--ca); text-decoration: none; font-weight: 600; }
+.topbar a:hover { text-decoration: underline; }
+
+/* ── Nav ── */
+nav { background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,.06); }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; height: 74px; }
+.logo { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+.logo-icon { width: 48px; height: 48px; background: var(--c1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+.logo-text { font-weight: 800; font-size: 1rem; color: var(--c1); line-height: 1.2; }
+.logo-sub { font-size: .68rem; color: #999; font-weight: 400; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a { padding: 8px 16px; font-size: .87rem; font-weight: 500; color: #555; text-decoration: none; border-radius: 8px; cursor: pointer; transition: all .18s; }
+.nav-links a:hover, .nav-links a.active { background: var(--pale); color: var(--c1); font-weight: 600; }
+.nav-cta { background: var(--c1) !important; color: white !important; font-weight: 700 !important; margin-left: 8px; padding: 10px 22px !important; }
+.nav-cta:hover { opacity: .9; }
+
+/* ── Pages ── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ── Hero ── */
+.hero { background: linear-gradient(135deg, #071a3a 0%, #0d2d5e 50%, #0a2248 100%); min-height: 90vh; display: flex; align-items: center; padding: 80px 28px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, #3a8fde18 0%, transparent 60%); pointer-events: none; }
+.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; width: 100%; position: relative; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(58,143,222,0.15); border: 1px solid #3a8fde40; padding: 8px 18px; border-radius: 50px; margin-bottom: 24px; color: var(--ca); font-size: .78rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+.hero h1 { font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 900; color: white; line-height: 1.05; letter-spacing: -2px; margin-bottom: 22px; }
+.hero h1 em { color: var(--ca); font-style: normal; }
+.hero-desc { color: rgba(255,255,255,.7); font-size: 1.05rem; line-height: 1.85; margin-bottom: 36px; max-width: 480px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary { background: var(--ca); color: #071a3a; padding: 16px 32px; font-weight: 800; font-size: 1rem; text-decoration: none; border-radius: 10px; display: inline-block; transition: all .2s; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px #3a8fde60; }
+.btn-secondary { background: rgba(255,255,255,.08); color: white; border: 1px solid rgba(255,255,255,.25); padding: 16px 28px; font-size: 1rem; border-radius: 10px; display: inline-block; cursor: pointer; transition: all .2s; }
+.btn-secondary:hover { background: rgba(255,255,255,.15); }
+.hero-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 36px; backdrop-filter: blur(10px); }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 22px; text-align: center; }
+.stat-n { font-size: 1.9rem; font-weight: 900; color: var(--ca); margin-bottom: 4px; }
+.stat-l { font-size: .72rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: 1px; }
+.trust-row { display: flex; align-items: center; gap: 10px; margin-top: 20px; color: rgba(255,255,255,.5); font-size: .82rem; }
+.trust-dot { width: 6px; height: 6px; background: var(--ca); border-radius: 50%; }
+
+/* ── Sections ── */
+.section { padding: 88px 28px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label { font-size: .7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--ca); margin-bottom: 10px; }
+.section-title { font-size: clamp(1.9rem, 3vw, 2.8rem); font-weight: 900; color: var(--c1); line-height: 1.1; letter-spacing: -1px; margin-bottom: 14px; }
+.section-desc { color: #777; font-size: 1rem; line-height: 1.8; max-width: 580px; }
+.section-head { margin-bottom: 56px; }
+.section-head.center { text-align: center; }
+.section-head.center .section-desc { margin: 0 auto; }
+
+/* ── Cards grid ── */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; }
+.card { background: white; border: 1px solid #eee; border-radius: var(--radius); padding: 30px; transition: all .25s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.1); border-color: var(--ca); }
+.card-icon { width: 54px; height: 54px; background: var(--pale); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 18px; }
+.card h3 { font-size: 1rem; font-weight: 800; color: var(--c1); margin-bottom: 10px; }
+.card p { color: #777; font-size: .87rem; line-height: 1.75; }
+
+/* ── Why us ── */
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.why-card { background: var(--pale); border-radius: var(--radius); padding: 24px; display: flex; gap: 18px; align-items: flex-start; }
+.why-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+.why-card h4 { font-size: .95rem; font-weight: 800; color: var(--c1); margin-bottom: 6px; }
+.why-card p { font-size: .85rem; color: #666; line-height: 1.7; }
+
+/* ── Reviews ── */
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+.rv-card { background: white; border: 1px solid #eee; border-radius: var(--radius); padding: 30px; }
+.rv-stars { color: #f59e0b; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+.rv-card p { color: #444; font-size: .9rem; line-height: 1.85; margin-bottom: 22px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.rv-avatar { width: 40px; height: 40px; background: var(--c1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: .85rem; flex-shrink: 0; }
+.rv-name { font-weight: 700; font-size: .85rem; color: var(--c1); }
+.rv-label { font-size: .72rem; color: #bbb; margin-top: 2px; }
+
+/* ── Contact ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+.contact-card { background: var(--pale); border-radius: var(--radius); padding: 24px; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
+.contact-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+.contact-card h4 { font-size: .9rem; font-weight: 700; color: var(--c1); margin-bottom: 6px; }
+.contact-card p, .contact-card a { font-size: .87rem; color: #555; text-decoration: none; line-height: 1.7; }
+.contact-card a:hover { color: var(--c1); }
+.cta-box { background: var(--c1); border-radius: var(--radius); padding: 36px; text-align: center; color: white; margin-top: 8px; }
+.cta-box h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 10px; }
+.cta-box p { color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: 22px; }
+.cta-box a { background: var(--ca); color: #071a3a; padding: 15px 30px; font-weight: 800; border-radius: 10px; text-decoration: none; display: inline-block; font-size: .95rem; transition: all .2s; }
+.cta-box a:hover { transform: translateY(-2px); }
+.hours-card { background: white; border: 1px solid #eee; border-radius: var(--radius); padding: 30px; }
+.hours-card h3 { font-size: 1rem; font-weight: 800; color: var(--c1); margin-bottom: 22px; }
+.hours-table { width: 100%; border-collapse: collapse; }
+.hours-table tr { border-bottom: 1px solid #f4f4f4; }
+.hours-table tr:last-child { border-bottom: none; }
+.hours-table td { padding: 10px 0; font-size: .87rem; }
+.hours-table td:first-child { color: #444; font-weight: 600; }
+.hours-table td:last-child { text-align: right; color: var(--c1); font-weight: 600; }
+.hours-table .closed td:last-child { color: #e57373; }
+
+/* ── Footer ── */
+footer { background: var(--dark); color: rgba(255,255,255,.35); padding: 36px 28px; text-align: center; font-size: .8rem; }
+footer strong { color: rgba(255,255,255,.6); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-inner, .contact-grid { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { min-height: auto; padding: 60px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="inner">
+    <span>📍 1400 Easton Dr STE 119, Bakersfield, CA 93309, USA</span>
+    <a href="tel:6616311743">📞 (661) 631-1743 — Call Now</a>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" onclick="showPage('home')">
+      <div class="logo-icon">❄️</div>
+      <div>
+        <div class="logo-text">Power & Performance Air</div>
+        <div class="logo-sub">HVAC · Bakersfield, CA</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+      <a onclick="showPage('services')" id="nav-services">Services</a>
+      <a onclick="showPage('reviews')" id="nav-reviews">Reviews</a>
+      <a onclick="showPage('contact')" id="nav-contact">Contact</a>
+      <a href="tel:6616311743" class="nav-cta">📞 Schedule Service</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">❄️ HVAC · Bakersfield, CA</div>
+        <h1>Heating & Cooling<br>You Can Trust.<br><em>Year-Round Comfort.</em></h1>
+        <p class="hero-desc">Power & Performance Air keeps your home comfortable in every season. Expert AC, heating, and air quality solutions for Bakersfield, CA homes and businesses.</p>
+        <div class="hero-btns">
+          <a href="tel:6616311743" class="btn-primary">📞 Schedule Service</a>
+          <span class="btn-secondary" onclick="showPage('services')">See Our Services →</span>
+        </div>
+        <div class="trust-row">
+          <div class="trust-dot"></div> Licensed & Insured
+          <div class="trust-dot"></div> Local Bakersfield, CA Business
+          <div class="trust-dot"></div> Free Estimates
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stats-grid"><div class="stat"><div class="stat-n">Same Day</div><div class="stat-l">Service</div></div><div class="stat"><div class="stat-n">⭐4.8</div><div class="stat-l">Rated</div></div><div class="stat"><div class="stat-n">All Makes</div><div class="stat-l">& Models</div></div><div class="stat"><div class="stat-n">NATE</div><div class="stat-l">Certified</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--pale);">
+    <div class="section-inner">
+      <div class="section-head center">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">The Power Difference</h2>
+      </div>
+      <div class="why-grid"><div class="why-card">
+            <div class="why-icon">❄️</div>
+            <div><h4>All Makes & Models</h4><p>We service and install every major HVAC brand.</p></div>
+        </div><div class="why-card">
+            <div class="why-icon">🚨</div>
+            <div><h4>Same-Day Service</h4><p>AC go out in July? We prioritize emergency calls.</p></div>
+        </div><div class="why-card">
+            <div class="why-icon">💰</div>
+            <div><h4>Financing Available</h4><p>Flexible payment options on new system installations.</p></div>
+        </div><div class="why-card">
+            <div class="why-icon">🏅</div>
+            <div><h4>NATE Certified Techs</h4><p>Our technicians hold the highest HVAC industry certifications.</p></div>
+        </div></div>
+    </div>
+  </section>
+</div>
+
+<!-- SERVICES PAGE -->
+<div class="page" id="page-services">
+  <section class="section" style="padding-top: 64px;">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our HVAC Services</h2>
+        <p class="section-desc">Professional, reliable hvac services for homeowners and businesses throughout Bakersfield, CA and surrounding areas.</p>
+      </div>
+      <div class="cards-grid"><div class="card">
+            <div class="card-icon">❄️</div>
+            <h3>AC Installation & Replacement</h3>
+            <p>Energy-efficient AC systems sized and installed for your home.</p>
+        </div><div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>Heating Repair & Install</h3>
+            <p>Furnaces, heat pumps, and boilers — repaired or replaced.</p>
+        </div><div class="card">
+            <div class="card-icon">🌀</div>
+            <h3>Duct Cleaning & Sealing</h3>
+            <p>Improve air quality and efficiency with professional duct services.</p>
+        </div><div class="card">
+            <div class="card-icon">🔧</div>
+            <h3>Seasonal Tune-Ups</h3>
+            <p>Spring and fall maintenance to prevent breakdowns and save energy.</p>
+        </div><div class="card">
+            <div class="card-icon">💨</div>
+            <h3>Indoor Air Quality</h3>
+            <p>Air purifiers, humidifiers, and filtration systems for healthier air.</p>
+        </div><div class="card">
+            <div class="card-icon">🏢</div>
+            <h3>Commercial HVAC</h3>
+            <p>Full commercial heating and cooling system installation and service.</p>
+        </div></div>
+    </div>
+  </section>
+</div>
+
+<!-- REVIEWS PAGE -->
+<div class="page" id="page-reviews">
+  <section class="section" style="padding-top: 64px;">
+    <div class="section-inner">
+      <div class="section-head center">
+        <div class="section-label">Customer Reviews</div>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc">Don't take our word for it — here's what real customers in Bakersfield, CA say about working with Power & Performance Air.</p>
+      </div>
+      <div class="reviews-grid"><div class="rv-card">
+            <div class="rv-stars">★★★★★</div>
+            <p>"Javier and his crew did a excellent job installing my new A/C and furnace! Although not something that everyone would be excited to get, they made the installation a non-hassle for me. Javier also recommended the Honeywe..."</p>
+            <div class="reviewer">
+                <div class="rv-avatar">T</div>
+                <div><div class="rv-name">Thomas</div><div class="rv-label">Verified Google Review</div></div>
+            </div></div><div class="rv-card">
+            <div class="rv-stars">★★★★★</div>
+            <p>"We were without air conditioning for several days in the heat, and Keshawn came through for us in such a professional and timely way. He quickly diagnosed the problem, explained everything clearly, and had our system bac..."</p>
+            <div class="reviewer">
+                <div class="rv-avatar">RL</div>
+                <div><div class="rv-name">Rebecca Lee Castro</div><div class="rv-label">Verified Google Review</div></div>
+            </div></div><div class="rv-card">
+            <div class="rv-stars">★★★★★</div>
+            <p>"I've only had three encounters with this company 1. The initial call (after hours by the way) Mike answered (an actual person) seemed professional was willing to get someone out the day to look at my ac. I declined. Trie..."</p>
+            <div class="reviewer">
+                <div class="rv-avatar">DH</div>
+                <div><div class="rv-name">David Herrold</div><div class="rv-label">Verified Google Review</div></div>
+            </div></div><div class="rv-card">
+            <div class="rv-stars">★★★★★</div>
+            <p>"It totally exceeded my expectation, the Power and Performance Air was the best. They were fast, on time and did a very good job. Kameron who did work on our AC was very awesome, he was knowledgeable and very skilled. He ..."</p>
+            <div class="reviewer">
+                <div class="rv-avatar">RB</div>
+                <div><div class="rv-name">Rosalie Bailen</div><div class="rv-label">Verified Google Review</div></div>
+            </div></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <section class="section" style="padding-top: 64px;">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Schedule Service</h2>
+        <p class="section-desc">Ready to get started? Give us a call or reach out — we respond fast and estimates are always free.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div><h4>Phone</h4><a href="tel:6616311743">(661) 631-1743</a></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div><h4>Service Area</h4><p>Bakersfield, CA and surrounding areas</p></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <div><h4>Email</h4><p>Reply to this email or call us directly</p></div>
+          </div>
+          <div class="cta-box">
+            <h3>Ready to Get Started?</h3>
+            <p>Free estimates, fast response, quality work guaranteed.</p>
+            <a href="tel:6616311743">📞 Call (661) 631-1743</a>
+          </div>
+        </div>
+        <div class="hours-card">
+          <h3>Business Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday</td><td>7:00 AM – 6:00 PM</td></tr>
+            <tr><td>Tuesday</td><td>7:00 AM – 6:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>7:00 AM – 6:00 PM</td></tr>
+            <tr><td>Thursday</td><td>7:00 AM – 6:00 PM</td></tr>
+            <tr><td>Friday</td><td>7:00 AM – 5:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 2:00 PM</td></tr>
+            <tr class="closed"><td>Sunday</td><td>Emergency Only</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p><strong>Power & Performance Air</strong> · HVAC · Bakersfield, CA · © 2026</p>
+</footer>
+
+<script>
+function showPage(n) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + n).classList.add('active');
+  const el = document.getElementById('nav-' + n);
+  if (el) el.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
