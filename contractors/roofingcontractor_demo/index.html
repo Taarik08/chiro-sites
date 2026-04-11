@@ -4,55 +4,95 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Demo Roofing Contractor Co. | Roofing Contractor | Nashville, TN</title>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Oswald',sans-serif;color:#1a1a1a;background:#fff}a{text-decoration:none}</style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Oswald',sans-serif;color:#1a1a1a;background:#fff}
+a{text-decoration:none}
+img{max-width:100%}
+/* ── Global responsive helpers ── */
+.rg-2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.rg-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rg-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.rg-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.rg-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.rg-sidebar{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start}
+.mob-nav{display:none}
+.desk-nav-links{display:flex;align-items:center;gap:2px}
+/* ── Mobile nav ── */
+@media(max-width:768px){
+  .desk-nav-links{display:none}
+  .mob-nav{display:flex;align-items:center;gap:10px}
+  .rg-2,.rg-hero,.rg-sidebar{grid-template-columns:1fr!important;gap:24px!important}
+  .rg-3{grid-template-columns:1fr!important;gap:16px!important}
+  .rg-4{grid-template-columns:1fr 1fr!important;gap:14px!important}
+  .rg-auto{grid-template-columns:1fr!important}
+  .split-left,.split-right{min-height:auto!important}
+  .hero-pad{padding:52px 18px 60px!important}
+  .section-pad{padding:40px 18px!important}
+  h1{font-size:clamp(2rem,8vw,3rem)!important}
+  .hide-mob{display:none!important}
+  .nav-wrap{padding:0 18px!important}
+  .sticky-card{position:static!important}
+}
+@media(max-width:480px){
+  .rg-4{grid-template-columns:1fr!important}
+}
+</style>
 </head>
-<body>
-<nav style="background:#fff;border-bottom:1px solid #f0ddd0;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.07)">
-<div style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:70px">
-  <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none">
-    <div style="width:44px;height:44px;background:#2c0a00;border-radius:0px;display:flex;align-items:center;justify-content:center;font-size:1.3rem">🏠</div>
-    <div><div style="font-weight:800;font-size:.95rem;color:#2c0a00;font-family:'Oswald',sans-serif">Demo Roofing Contractor Co.</div>
-    <div style="font-size:.65rem;color:#999">Roofing Contractor · Nashville, TN</div></div>
+<body><nav style="background:#fff;border-bottom:1px solid #f0ddd0;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.07)">
+<div class="nav-wrap" style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:68px">
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0">
+    <div style="width:40px;height:40px;background:#2c0a00;border-radius:0px;display:flex;align-items:center;justify-content:center;font-size:1.2rem">🏠</div>
+    <div><div style="font-weight:800;font-size:.9rem;color:#2c0a00;font-family:'Oswald',sans-serif">Demo Roofing Contractor Co.</div>
+    <div style="font-size:.62rem;color:#999">Roofing Contractor · Nashville, TN</div></div>
   </a>
-  <div style="display:flex;align-items:center;gap:2px">
-    <a href="index.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Home</a>
-    <a href="services.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Services</a>
-    <a href="reviews.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Reviews</a>
-    <a href="booking.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Book</a>
-    <a href="contact.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Contact</a>
-    <a href="tel:5551234567" style="background:#2c0a00;color:white;padding:10px 20px;border-radius:0px;font-size:.84rem;font-weight:700;text-decoration:none;margin-left:8px;font-family:'Oswald',sans-serif">📞 Call Now</a>
+  <!-- Desktop nav -->
+  <div class="desk-nav-links">
+    <a href="index.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Home</a>
+    <a href="services.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Services</a>
+    <a href="reviews.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Reviews</a>
+    <a href="booking.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Book</a>
+    <a href="contact.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'Oswald',sans-serif">Contact</a>
+    <a href="tel:5551234567" style="background:#ff6b35;color:white;padding:10px 18px;border-radius:0px;font-size:.83rem;font-weight:700;text-decoration:none;margin-left:8px;font-family:'Oswald',sans-serif">📞 Call Now</a>
   </div>
-</div></nav>
-<div style="background:linear-gradient(160deg,#2c0a00 0%,#5c1a00 100%);min-height:85vh;display:flex;align-items:center;padding:80px 28px">
-<div style="max-width:1200px;margin:0 auto;width:100%">
-  <div style="max-width:660px">
-    <div style="font-size:.7rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#ff6b35;margin-bottom:18px">Roofing Contractor · Nashville, TN</div>
-    <h1 style="font-size:clamp(3rem,6vw,5.5rem);font-weight:700;color:white;line-height:.95;letter-spacing:-3px;margin-bottom:20px;text-transform:uppercase">Demo Roofing Contractor Co.</h1>
-    <div style="width:70px;height:4px;background:#ff6b35;margin-bottom:24px"></div>
-    <p style="color:rgba(255,255,255,.65);font-size:1rem;line-height:1.85;margin-bottom:32px">Protecting Nashville, TN homes and businesses. Expert replacements, storm damage, free inspections.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px">
-      <a href="tel:5551234567" style="background:#ff6b35;color:white;padding:15px 32px;font-weight:700;text-transform:uppercase;letter-spacing:1px">📞 Free Inspection</a>
-      <a href="booking.html" style="border:2px solid rgba(255,255,255,.35);color:white;padding:15px 26px">Schedule</a>
+  <!-- Mobile nav -->
+  <div class="mob-nav">
+    <a href="tel:5551234567" style="background:#ff6b35;color:white;padding:9px 14px;border-radius:0px;font-size:.8rem;font-weight:700;text-decoration:none">📞 Call</a>
+    <button onclick="document.getElementById('mob-menu').style.display=document.getElementById('mob-menu').style.display==='none'?'flex':'none'" style="background:none;border:none;cursor:pointer;padding:6px;color:#2c0a00;font-size:1.4rem">☰</button>
+  </div>
+</div>
+<!-- Mobile dropdown -->
+<div id="mob-menu" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #f0ddd0;padding:12px 18px;gap:4px">
+  <a href="index.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600">🏠 Home</a><a href="services.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600">🔧 Services</a><a href="reviews.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600">⭐ Reviews</a><a href="booking.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600">📅 Book Online</a><a href="contact.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600">📞 Contact</a>
+</div>
+</nav>
+<div style="background:linear-gradient(160deg,#2c0a00 0%,#5c1a00 100%);padding:clamp(50px,8vw,86px) 18px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="max-width:620px">
+      <div style="font-size:.66rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#ff6b35;margin-bottom:14px">Roofing Contractor · Nashville, TN</div>
+      <h1 style="font-size:clamp(2.2rem,6vw,4.8rem);font-weight:700;color:white;line-height:.95;letter-spacing:-2px;margin-bottom:16px;text-transform:uppercase">Demo Roofing Contractor Co.</h1>
+      <div style="width:56px;height:4px;background:#ff6b35;margin-bottom:18px"></div>
+      <p style="color:rgba(255,255,255,.65);font-size:.95rem;line-height:1.85;margin-bottom:26px">Protecting Nashville, TN homes. Expert replacements, storm damage, free inspections.</p>
+      <div style="display:flex;gap:11px;flex-wrap:wrap;margin-bottom:30px">
+        <a href="tel:5551234567" style="background:#ff6b35;color:white;padding:13px 26px;font-weight:700;text-transform:uppercase;letter-spacing:1px">📞 Free Inspection</a>
+        <a href="booking.html" style="border:2px solid rgba(255,255,255,.35);color:white;padding:13px 20px">Schedule</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div style="border:1px solid rgba(255,255,255,.15);padding:13px;text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#ff6b35">Free</div><div style="font-size:.64rem;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px">Inspection</div></div>
+        <div style="border:1px solid rgba(255,255,255,.15);padding:13px;text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#ff6b35">4.8★</div><div style="font-size:.64rem;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px">Rating</div></div>
+        <div style="border:1px solid rgba(255,255,255,.15);padding:13px;text-align:center"><div style="font-size:1.2rem;font-weight:700;color:#ff6b35">1-2 Day</div><div style="font-size:.64rem;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px">Turnaround</div></div>
+      </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
-      <div style="border:1px solid rgba(255,255,255,.15);padding:16px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#ff6b35">Free</div><div style="font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-top:3px">Inspection</div></div><div style="border:1px solid rgba(255,255,255,.15);padding:16px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#ff6b35">4.8★</div><div style="font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-top:3px">Rating</div></div><div style="border:1px solid rgba(255,255,255,.15);padding:16px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#ff6b35">1-2 Day</div><div style="font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-top:3px">Turnaround</div></div>
-    </div>
   </div>
-</div></div>
-<div style="background:#fff8f5;padding:40px 28px;border-bottom:1px solid #ffe0cc">
-<div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
-  <div style="padding:18px;border-left:3px solid #ff6b35"><div style="font-size:1rem;margin-bottom:6px">🌪️</div><div style="font-weight:700;color:#2c0a00;font-size:.87rem;margin-bottom:4px">Storm Experts</div><div style="color:#888;font-size:.8rem">Insurance claim help</div></div><div style="padding:18px;border-left:3px solid #ff6b35"><div style="font-size:1rem;margin-bottom:6px">🏅</div><div style="font-weight:700;color:#2c0a00;font-size:.87rem;margin-bottom:4px">Warranties</div><div style="color:#888;font-size:.8rem">Lifetime options</div></div><div style="padding:18px;border-left:3px solid #ff6b35"><div style="font-size:1rem;margin-bottom:6px">⚡</div><div style="font-weight:700;color:#2c0a00;font-size:.87rem;margin-bottom:4px">Fast</div><div style="color:#888;font-size:.8rem">1–2 day jobs</div></div><div style="padding:18px;border-left:3px solid #ff6b35"><div style="font-size:1rem;margin-bottom:6px">📍</div><div style="font-weight:700;color:#2c0a00;font-size:.87rem;margin-bottom:4px">Contact</div><div style="color:#888;font-size:.8rem">(555) 123-4567</div></div>
-</div></div>
-<div style="background:white;padding:56px 28px">
-<div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px">
-  <div>
-    <div style="display:flex;gap:14px;margin-bottom:14px;padding:16px;background:#fff3ee;border-radius:6px"><span style="font-size:1.2rem">📍</span><div><div style="font-weight:700;color:#2c0a00;font-size:.85rem">Address</div><div style="color:#666;font-size:.83rem">123 Main St, Nashville, TN 37201</div></div></div><div style="display:flex;gap:14px;margin-bottom:14px;padding:16px;background:#fff3ee;border-radius:6px"><span style="font-size:1.2rem">📞</span><div><div style="font-weight:700;color:#2c0a00;font-size:.85rem">Phone</div><div style="color:#666;font-size:.83rem"><a href="tel:5551234567" style="color:#ff6b35">(555) 123-4567</a></div></div></div><div style="display:flex;gap:14px;margin-bottom:14px;padding:16px;background:#fff3ee;border-radius:6px"><span style="font-size:1.2rem">✉️</span><div><div style="font-weight:700;color:#2c0a00;font-size:.85rem">Email</div><div style="color:#666;font-size:.83rem">demo@example.com</div></div></div><div style="display:flex;gap:14px;margin-bottom:14px;padding:16px;background:#fff3ee;border-radius:6px"><span style="font-size:1.2rem">🕐</span><div><div style="font-weight:700;color:#2c0a00;font-size:.85rem">Hours</div><div style="color:#666;font-size:.83rem">Mon–Sat 7am–6pm · Emergency 24/7</div></div></div>
-  </div>
-  <div style="background:#2c0a00;padding:32px;color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
-    <div style="font-size:3rem;margin-bottom:12px">🏠</div>
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px">Ready for a Free Inspection?</h3>
-    <p style="color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:18px">No obligation. Honest assessment.</p>
-    <a href="tel:5551234567" style="background:#ff6b35;color:white;padding:13px 26px;font-weight:700">Call (555) 123-4567</a>
+</div>
+<div style="background:white;padding:52px 18px">
+<div style="max-width:1100px;margin:0 auto" class="rg-2">
+  <div><div style="display:flex;gap:11px;margin-bottom:12px;padding:13px;background:#fff3ee;border-radius:6px"><span style="font-size:1.05rem">📍</span><div><div style="font-weight:700;color:#2c0a00;font-size:.82rem">Address</div><div style="color:#666;font-size:.79rem">123 Main St, Nashville, TN 37201</div></div></div><div style="display:flex;gap:11px;margin-bottom:12px;padding:13px;background:#fff3ee;border-radius:6px"><span style="font-size:1.05rem">📞</span><div><div style="font-weight:700;color:#2c0a00;font-size:.82rem">Phone</div><div style="color:#666;font-size:.79rem"><a href="tel:5551234567" style="color:#ff6b35">(555) 123-4567</a></div></div></div><div style="display:flex;gap:11px;margin-bottom:12px;padding:13px;background:#fff3ee;border-radius:6px"><span style="font-size:1.05rem">✉️</span><div><div style="font-weight:700;color:#2c0a00;font-size:.82rem">Email</div><div style="color:#666;font-size:.79rem">demo@example.com</div></div></div><div style="display:flex;gap:11px;margin-bottom:12px;padding:13px;background:#fff3ee;border-radius:6px"><span style="font-size:1.05rem">🕐</span><div><div style="font-weight:700;color:#2c0a00;font-size:.82rem">Hours</div><div style="color:#666;font-size:.79rem">Mon–Sat 7am–6pm · Emergency 24/7</div></div></div></div>
+  <div style="background:#2c0a00;padding:28px;color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-radius:8px">
+    <div style="font-size:2.2rem;margin-bottom:10px">🏠</div>
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:7px">Ready for a Free Inspection?</h3>
+    <p style="color:rgba(255,255,255,.6);font-size:.82rem;margin-bottom:14px">No obligation. Honest assessment.</p>
+    <a href="tel:5551234567" style="background:#ff6b35;color:white;padding:11px 22px;font-weight:700">Call (555) 123-4567</a>
   </div>
 </div></div>
 <footer style="background:#2c0a00;color:rgba(255,255,255,.45);padding:40px 28px;text-align:center;font-family:'Oswald',sans-serif">
