@@ -4,47 +4,88 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Demo Painting Contractor Co. | Painting Contractor | Nashville, TN</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#fff}a{text-decoration:none}</style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#fff}
+a{text-decoration:none}
+img{max-width:100%}
+/* ── Global responsive helpers ── */
+.rg-2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.rg-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rg-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.rg-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.rg-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.rg-sidebar{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start}
+.mob-nav{display:none}
+.desk-nav-links{display:flex;align-items:center;gap:2px}
+/* ── Mobile nav ── */
+@media(max-width:768px){
+  .desk-nav-links{display:none}
+  .mob-nav{display:flex;align-items:center;gap:10px}
+  .rg-2,.rg-hero,.rg-sidebar{grid-template-columns:1fr!important;gap:24px!important}
+  .rg-3{grid-template-columns:1fr!important;gap:16px!important}
+  .rg-4{grid-template-columns:1fr 1fr!important;gap:14px!important}
+  .rg-auto{grid-template-columns:1fr!important}
+  .split-left,.split-right{min-height:auto!important}
+  .hero-pad{padding:52px 18px 60px!important}
+  .section-pad{padding:40px 18px!important}
+  h1{font-size:clamp(2rem,8vw,3rem)!important}
+  .hide-mob{display:none!important}
+  .nav-wrap{padding:0 18px!important}
+  .sticky-card{position:static!important}
+}
+@media(max-width:480px){
+  .rg-4{grid-template-columns:1fr!important}
+}
+</style>
 </head>
-<body>
-<nav style="background:#fff;border-bottom:1px solid #f0dde8;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.07)">
-<div style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:70px">
-  <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none">
-    <div style="width:44px;height:44px;background:#2d1b69;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem">🎨</div>
-    <div><div style="font-weight:800;font-size:.95rem;color:#2d1b69;font-family:'DM Sans',sans-serif">Demo Painting Contractor Co.</div>
-    <div style="font-size:.65rem;color:#999">Painting Contractor · Nashville, TN</div></div>
+<body><nav style="background:#fff;border-bottom:1px solid #f0dde8;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.07)">
+<div class="nav-wrap" style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:68px">
+  <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0">
+    <div style="width:40px;height:40px;background:#2d1b69;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem">🎨</div>
+    <div><div style="font-weight:800;font-size:.9rem;color:#2d1b69;font-family:'DM Sans',sans-serif">Demo Painting Contractor Co.</div>
+    <div style="font-size:.62rem;color:#999">Painting Contractor · Nashville, TN</div></div>
   </a>
-  <div style="display:flex;align-items:center;gap:2px">
-    <a href="index.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Home</a>
-    <a href="services.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Services</a>
-    <a href="reviews.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Reviews</a>
-    <a href="booking.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Book</a>
-    <a href="contact.html" style="padding:8px 13px;font-size:.84rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Contact</a>
-    <a href="tel:5551234567" style="background:#2d1b69;color:white;padding:10px 20px;border-radius:30px;font-size:.84rem;font-weight:700;text-decoration:none;margin-left:8px;font-family:'DM Sans',sans-serif">📞 Call Now</a>
+  <!-- Desktop nav -->
+  <div class="desk-nav-links">
+    <a href="index.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Home</a>
+    <a href="services.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Services</a>
+    <a href="reviews.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Reviews</a>
+    <a href="booking.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Book</a>
+    <a href="contact.html" style="padding:8px 12px;font-size:.83rem;color:#333;text-decoration:none;border-radius:6px;font-family:'DM Sans',sans-serif">Contact</a>
+    <a href="tel:5551234567" style="background:#f72585;color:white;padding:10px 18px;border-radius:30px;font-size:.83rem;font-weight:700;text-decoration:none;margin-left:8px;font-family:'DM Sans',sans-serif">📞 Call Now</a>
   </div>
-</div></nav>
-<div style="display:grid;grid-template-columns:1fr 1fr;min-height:88vh">
-  <div style="background:#2d1b69;display:flex;flex-direction:column;justify-content:center;padding:72px 48px">
-    <div style="font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f72585;margin-bottom:18px">Painting Contractor</div>
-    <h1 style="font-size:clamp(2.6rem,4vw,4rem);font-weight:800;color:white;line-height:1.02;margin-bottom:18px">Demo Painting Contractor Co.</h1>
-    <p style="color:rgba(255,255,255,.65);font-size:.97rem;line-height:1.85;margin-bottom:32px;max-width:400px">Transforming homes and businesses across Nashville, TN with expert painting. Premium materials, spotless results.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px">
-      <a href="tel:5551234567" style="background:#f72585;color:white;padding:14px 28px;border-radius:30px;font-weight:700">📞 Get a Quote</a>
-      <a href="booking.html" style="border:2px solid rgba(255,255,255,.3);color:white;padding:14px 22px;border-radius:30px">Book Consult</a>
-    </div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap">
-      <span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:6px 13px;border-radius:20px;font-size:.76rem">✓ Licensed</span><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:6px 13px;border-radius:20px;font-size:.76rem">✓ Free Consult</span><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:6px 13px;border-radius:20px;font-size:.76rem">✓ Premium Paints</span><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:6px 13px;border-radius:20px;font-size:.76rem">✓ On-Time</span>
-    </div>
+  <!-- Mobile nav -->
+  <div class="mob-nav">
+    <a href="tel:5551234567" style="background:#f72585;color:white;padding:9px 14px;border-radius:30px;font-size:.8rem;font-weight:700;text-decoration:none">📞 Call</a>
+    <button onclick="document.getElementById('mob-menu').style.display=document.getElementById('mob-menu').style.display==='none'?'flex':'none'" style="background:none;border:none;cursor:pointer;padding:6px;color:#2d1b69;font-size:1.4rem">☰</button>
   </div>
-  <div style="background:#f72585;display:flex;flex-direction:column;gap:20px;padding:48px;justify-content:center">
-    <div style="background:white;border-radius:14px;padding:26px">
-      <h3 style="font-weight:800;color:#2d1b69;font-size:.97rem;margin-bottom:16px">📋 Business Details</h3>
-      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px;background:#faf5ff;border-radius:8px;margin-bottom:8px"><span>📍</span><div><div style="font-weight:700;color:#2d1b69;font-size:.78rem">Address</div><div style="color:#666;font-size:.8rem">123 Main St, Nashville, TN 37201</div></div></div><div style="display:flex;gap:10px;align-items:flex-start;padding:9px;background:#faf5ff;border-radius:8px;margin-bottom:8px"><span>📞</span><div><div style="font-weight:700;color:#2d1b69;font-size:.78rem">Phone</div><div style="color:#666;font-size:.8rem"><a href="tel:5551234567" style="color:#2d1b69">(555) 123-4567</a></div></div></div><div style="display:flex;gap:10px;align-items:flex-start;padding:9px;background:#faf5ff;border-radius:8px;margin-bottom:8px"><span>✉️</span><div><div style="font-weight:700;color:#2d1b69;font-size:.78rem">Email</div><div style="color:#666;font-size:.8rem">demo@example.com</div></div></div><div style="display:flex;gap:10px;align-items:flex-start;padding:9px;background:#faf5ff;border-radius:8px;margin-bottom:8px"><span>⭐</span><div><div style="font-weight:700;color:#2d1b69;font-size:.78rem">Rating</div><div style="color:#666;font-size:.8rem">4.8 stars · 124+ reviews</div></div></div><div style="display:flex;gap:10px;align-items:flex-start;padding:9px;background:#faf5ff;border-radius:8px;margin-bottom:8px"><span>🕐</span><div><div style="font-weight:700;color:#2d1b69;font-size:.78rem">Hours</div><div style="color:#666;font-size:.8rem">Mon–Fri 8am–6pm · Sat by appt</div></div></div>
+</div>
+<!-- Mobile dropdown -->
+<div id="mob-menu" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #f0dde8;padding:12px 18px;gap:4px">
+  <a href="index.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600">🏠 Home</a><a href="services.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600">🔧 Services</a><a href="reviews.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600">⭐ Reviews</a><a href="booking.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600">📅 Book Online</a><a href="contact.html" style="padding:11px 14px;font-size:.9rem;color:#333;text-decoration:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600">📞 Contact</a>
+</div>
+</nav>
+<div class="rg-2">
+  <div class="split-left" style="background:#2d1b69;display:flex;flex-direction:column;justify-content:center;padding:clamp(36px,6vw,68px) clamp(22px,4vw,46px);min-height:86vh">
+    <div style="font-size:.66rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f72585;margin-bottom:14px">Painting Contractor</div>
+    <h1 style="font-size:clamp(1.9rem,5vw,3.6rem);font-weight:800;color:white;line-height:1.02;margin-bottom:14px">Demo Painting Contractor Co.</h1>
+    <p style="color:rgba(255,255,255,.65);font-size:.93rem;line-height:1.85;margin-bottom:24px">Transforming Nashville, TN homes and businesses. Premium materials, spotless results.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px">
+      <a href="tel:5551234567" style="background:#f72585;color:white;padding:12px 22px;border-radius:30px;font-weight:700">📞 Get a Quote</a>
+      <a href="booking.html" style="border:2px solid rgba(255,255,255,.3);color:white;padding:12px 18px;border-radius:30px">Book Consult</a>
     </div>
-    <div style="background:#2d1b69;border-radius:14px;padding:24px;text-align:center">
-      <div style="font-size:2rem;font-weight:900;color:#f72585">4.8★</div>
-      <div style="color:rgba(255,255,255,.6);font-size:.76rem;margin-top:4px">124+ Google Reviews in Nashville, TN</div>
-      <a href="booking.html" style="display:block;background:#f72585;color:white;padding:12px;border-radius:20px;font-weight:700;margin-top:14px;font-size:.86rem">Book a Color Consultation</a>
+    <div style="display:flex;gap:5px;flex-wrap:wrap"><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:5px 11px;border-radius:20px;font-size:.72rem">✓ Licensed</span><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:5px 11px;border-radius:20px;font-size:.72rem">✓ Free Consult</span><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:5px 11px;border-radius:20px;font-size:.72rem">✓ Premium Paints</span><span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);padding:5px 11px;border-radius:20px;font-size:.72rem">✓ On-Time</span></div>
+  </div>
+  <div class="split-right" style="background:#f72585;display:flex;flex-direction:column;gap:16px;padding:clamp(28px,4vw,46px);justify-content:center;min-height:86vh">
+    <div style="background:white;border-radius:14px;padding:20px">
+      <h3 style="font-weight:800;color:#2d1b69;font-size:.92rem;margin-bottom:12px">📋 Business Details</h3>
+      <div style="display:flex;gap:9px;align-items:flex-start;padding:8px;background:#faf5ff;border-radius:8px;margin-bottom:7px"><span>📍</span><div><div style="font-weight:700;color:#2d1b69;font-size:.76rem">Address</div><div style="color:#666;font-size:.78rem">123 Main St, Nashville, TN 37201</div></div></div><div style="display:flex;gap:9px;align-items:flex-start;padding:8px;background:#faf5ff;border-radius:8px;margin-bottom:7px"><span>📞</span><div><div style="font-weight:700;color:#2d1b69;font-size:.76rem">Phone</div><div style="color:#666;font-size:.78rem"><a href="tel:5551234567" style="color:#2d1b69">(555) 123-4567</a></div></div></div><div style="display:flex;gap:9px;align-items:flex-start;padding:8px;background:#faf5ff;border-radius:8px;margin-bottom:7px"><span>✉️</span><div><div style="font-weight:700;color:#2d1b69;font-size:.76rem">Email</div><div style="color:#666;font-size:.78rem">demo@example.com</div></div></div><div style="display:flex;gap:9px;align-items:flex-start;padding:8px;background:#faf5ff;border-radius:8px;margin-bottom:7px"><span>⭐</span><div><div style="font-weight:700;color:#2d1b69;font-size:.76rem">Rating</div><div style="color:#666;font-size:.78rem">4.8 stars · 124+ reviews</div></div></div><div style="display:flex;gap:9px;align-items:flex-start;padding:8px;background:#faf5ff;border-radius:8px;margin-bottom:7px"><span>🕐</span><div><div style="font-weight:700;color:#2d1b69;font-size:.76rem">Hours</div><div style="color:#666;font-size:.78rem">Mon–Fri 8am–6pm · Sat by appt</div></div></div>
+    </div>
+    <div style="background:#2d1b69;border-radius:14px;padding:18px;text-align:center">
+      <div style="font-size:1.7rem;font-weight:900;color:#f72585">4.8★</div>
+      <div style="color:rgba(255,255,255,.6);font-size:.72rem;margin-top:2px">124+ Google Reviews</div>
+      <a href="booking.html" style="display:block;background:#f72585;color:white;padding:10px;border-radius:20px;font-weight:700;margin-top:11px;font-size:.83rem">Book a Color Consultation</a>
     </div>
   </div>
 </div>
