@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waybright Electric | Electrician | Tulsa, OK</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Rajdhani',sans-serif;color:#222;background:#fff;-webkit-text-size-adjust:100%}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── NAV ── */
+.nav{background:#1b2a3b;border-bottom:1px solid #2a3d52;position:sticky;top:0;z-index:999;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:66px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:40px;height:40px;background:#1b2a3b;border-radius:0px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.nav-logo-name{font-weight:800;font-size:.88rem;color:rgba(255,255,255,.85)}
+.nav-logo-sub{font-size:.6rem;color:#aaa;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{padding:8px 11px;font-size:.82rem;color:rgba(255,255,255,.85);border-radius:6px;transition:background .2s}
+.nav-cta{background:#f97316;color:white;padding:9px 18px;border-radius:0px;font-size:.82rem;font-weight:700;margin-left:8px}
+.mob-nav{display:none;align-items:center;gap:8px}
+.mob-cta{background:#f97316;color:white;padding:8px 14px;border-radius:0px;font-size:.8rem;font-weight:700}
+.mob-toggle{background:none;border:none;cursor:pointer;font-size:1.5rem;color:rgba(255,255,255,.85);padding:4px 8px;line-height:1}
+.mob-menu{display:none;flex-direction:column;background:#1b2a3b;border-top:1px solid #2a3d52;padding:10px 16px;gap:2px}
+.mob-menu a{padding:12px 14px;font-size:.9rem;color:rgba(255,255,255,.85);border-radius:8px;font-weight:600;display:block}
+
+/* ── HERO SECTIONS ── */
+.hero{padding:72px 24px 80px}
+.hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.hero-inner-wide{max-width:1160px;margin:0 auto}
+.hero-single{max-width:680px}
+
+/* ── CONTENT SECTIONS ── */
+.section{padding:64px 24px}
+.section-inner{max-width:1160px;margin:0 auto}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.grid-sidebar{display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start}
+
+/* ── SPLIT LAYOUT (painter) ── */
+.split-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
+.split-col{display:flex;flex-direction:column;justify-content:center;padding:64px 48px}
+
+/* ── CARDS ── */
+.card{background:white;border-radius:12px;padding:22px}
+.card-pale{background:#fff7ed;border-radius:12px;padding:22px}
+
+/* ── BUTTONS ── */
+.btn{display:inline-block;padding:13px 24px;border-radius:0px;font-weight:700;font-size:.9rem;cursor:pointer}
+.btn-primary{background:#1b2a3b;color:white}
+.btn-accent{background:#f97316;color:white}
+.btn-outline{border:2px solid rgba(255,255,255,.35);color:white}
+.btn-outline-dark{border:2px solid #444;color:white}
+
+/* ── FOOTER ── */
+.footer{background:#1b2a3b;color:rgba(255,255,255,.45);padding:40px 24px;text-align:center}
+.footer p{font-size:.82rem;margin-bottom:5px}
+.footer .footer-name{color:rgba(255,255,255,.85);font-weight:700;font-size:.95rem;margin-bottom:4px}
+
+/* ── STAT BOX ── */
+.stat-row{display:flex;gap:28px;flex-wrap:wrap}
+.stat-box{text-align:center}
+.stat-num{font-size:1.7rem;font-weight:900;color:#f97316}
+.stat-lbl{font-size:.64rem;opacity:.45;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+
+/* ── INFO ROW ── */
+.info-row{display:flex;gap:10px;align-items:flex-start;padding:12px;background:#fff7ed;border-radius:10px;margin-bottom:10px}
+.info-row-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.info-row-title{font-weight:700;font-size:.78rem;color:#1b2a3b;margin-bottom:2px}
+.info-row-val{font-size:.8rem;color:#666}
+
+/* ── BADGE ROW ── */
+.badge-row{display:flex;gap:7px;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.1);color:rgba(255,255,255,.75);padding:6px 12px;border-radius:20px;font-size:.73rem}
+
+/* ── HOURS TABLE ── */
+.hours-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:.84rem}
+.hours-day{color:#444;font-weight:600}
+.hours-time{color:#1b2a3b;font-weight:700}
+
+/* ─────────── MOBILE (≤768px) ─────────── */
+@media(max-width:768px){
+  /* Nav */
+  .nav-links{display:none}
+  .mob-nav{display:flex}
+
+  /* Hero */
+  .hero{padding:44px 18px 52px}
+  .hero-inner{grid-template-columns:1fr;gap:24px}
+  .hero-single{max-width:100%}
+
+  /* Sections */
+  .section{padding:40px 18px}
+
+  /* All grids → single column */
+  .grid-2,.grid-sidebar{grid-template-columns:1fr;gap:22px}
+  .grid-3{grid-template-columns:1fr;gap:16px}
+  .grid-4{grid-template-columns:1fr 1fr;gap:14px}
+  .grid-auto{grid-template-columns:1fr;gap:16px}
+
+  /* Split layout stacks */
+  .split-wrap{grid-template-columns:1fr;min-height:auto}
+  .split-col{padding:44px 22px}
+
+  /* Typography */
+  h1{font-size:clamp(1.9rem,7vw,2.8rem)!important}
+  h2{font-size:clamp(1.3rem,5vw,1.8rem)!important}
+
+  /* Sticky card becomes static */
+  .sticky-info{position:static!important;top:auto!important}
+
+  /* Stat row wraps */
+  .stat-row{gap:18px}
+  .stat-num{font-size:1.4rem}
+
+  /* Buttons */
+  .btn-row{flex-wrap:wrap;gap:10px}
+}
+
+/* ─────────── SMALL MOBILE (≤480px) ─────────── */
+@media(max-width:480px){
+  .nav-inner{padding:0 14px}
+  .hero{padding:36px 14px 44px}
+  .section{padding:32px 14px}
+  .grid-4{grid-template-columns:1fr}
+  .split-col{padding:36px 16px}
+  .btn{padding:12px 18px;font-size:.85rem}
+  .footer{padding:32px 14px}
+}
+</style>
+</head>
+<body><nav class="nav">
+<div class="nav-inner">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">⚡</div>
+    <div><div class="nav-logo-name">Waybright Electric</div><div class="nav-logo-sub">Electrician · Tulsa, OK</div></div>
+  </a>
+  <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="services.html" class="nav-link">Services</a><a href="reviews.html" class="nav-link">Reviews</a><a href="booking.html" class="nav-link">Book</a><a href="contact.html" class="nav-link">Contact</a><a href="tel:9185203259" class="nav-cta">📞 Call Now</a></div>
+  <div class="mob-nav">
+    <a href="tel:9185203259" class="mob-cta">📞 Call</a>
+    <button class="mob-toggle" onclick="var m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex'">☰</button>
+  </div>
+</div>
+<div class="mob-menu" id="mm"><a href="index.html">🏠 Home</a><a href="services.html">🔧 Services</a><a href="reviews.html">⭐ Reviews</a><a href="booking.html">📅 Book Online</a><a href="contact.html">📞 Contact</a><a href="tel:9185203259" style="color:#f97316;font-weight:700">📞 (918) 520-3259</a></div>
+</nav>
+<div style="background:#1b2a3b;text-align:center" class="hero">
+  <div style="position:absolute;top:66px;left:0;right:0;height:4px;background:#f97316"></div>
+  <div class="hero-single" style="margin:0 auto">
+    <div style="display:inline-block;background:#f97316;color:#1b2a3b;font-weight:800;font-size:.68rem;letter-spacing:3px;text-transform:uppercase;padding:7px 16px;margin-bottom:18px">Electrician · Tulsa, OK</div>
+    <h1 style="color:white;line-height:.95;letter-spacing:-2px;margin-bottom:14px;text-transform:uppercase;font-weight:700">Waybright Electric</h1>
+    <p style="color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.85;margin-bottom:26px">Master-licensed electricians in Tulsa, OK. Safe, code-compliant work on every job.</p>
+    <div class="btn-row" style="display:flex;justify-content:center;gap:11px;margin-bottom:36px;flex-wrap:wrap">
+      <a href="tel:9185203259" class="btn" style="background:#f97316;color:#1b2a3b;text-transform:uppercase;letter-spacing:1px">(918) 520-3259</a>
+      <a href="booking.html" class="btn btn-outline">Schedule Service</a>
+    </div>
+    <div class="stat-row" style="justify-content:center"><div class="stat-box"><div class="stat-num">5★</div><div class="stat-lbl" style="color:rgba(255,255,255,.4)">Rating</div></div><div class="stat-box"><div class="stat-num">1091+</div><div class="stat-lbl" style="color:rgba(255,255,255,.4)">Reviews</div></div><div class="stat-box"><div class="stat-num">24/7</div><div class="stat-lbl" style="color:rgba(255,255,255,.4)">Service</div></div><div class="stat-box"><div class="stat-num">Licensed</div><div class="stat-lbl" style="color:rgba(255,255,255,.4)">& Insured</div></div></div>
+  </div>
+</div>
+<div class="section" style="background:white">
+<div class="section-inner grid-2">
+  <div>
+    <h2 style="font-weight:700;color:#1b2a3b;text-transform:uppercase;margin-bottom:8px">About Waybright Electric</h2>
+    <div style="width:46px;height:4px;background:#f97316;margin-bottom:18px"></div>
+    <p style="color:#555;font-size:.93rem;line-height:1.9;margin-bottom:14px">Waybright Electric is a locally owned electrical contractor in Tulsa, OK. Panel upgrades, wiring, EV chargers, emergency electrical — master-licensed, to code, guaranteed.</p>
+    <a href="services.html" class="btn btn-primary">View All Services</a>
+  </div>
+  <div style="background:#1b2a3b;color:white;padding:24px;border-left:4px solid #f97316">
+    <div style="font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f97316;margin-bottom:12px">Contact Info</div>
+    <div style="display:flex;gap:10px;margin-bottom:11px;font-size:.85rem;color:rgba(255,255,255,.8)"><span>📍</span><span>3081 W Albany St, Broken Arrow, OK 74012, USA</span></div><div style="display:flex;gap:10px;margin-bottom:11px;font-size:.85rem;color:rgba(255,255,255,.8)"><span>📞</span><span><a href="tel:9185203259" style="color:#f97316">(918) 520-3259</a></span></div><div style="display:flex;gap:10px;margin-bottom:11px;font-size:.85rem;color:rgba(255,255,255,.8)"><span>✉️</span><span>info@ecselectricllc.com</span></div><div style="display:flex;gap:10px;margin-bottom:11px;font-size:.85rem;color:rgba(255,255,255,.8)"><span>🕐</span><span>Mon–Fri 7am–6pm · Emergency 24/7</span></div>
+  </div>
+</div></div><footer class="footer">
+<p class="footer-name">Waybright Electric</p>
+<p>Electrician · Tulsa, OK</p>
+<p>📞 (918) 520-3259 &nbsp;·&nbsp; ✉️ info@ecselectricllc.com</p>
+<p style="margin-top:14px;font-size:.68rem;opacity:.3">© 2026 Waybright Electric. All rights reserved.</p>
+</footer></body>
+</html>
